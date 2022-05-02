@@ -22,7 +22,15 @@ public class Aluno extends Pessoa{
 
     //#region Regras de negócios
     public double calculaMedia(){
-        return 0;
+        double somaDasNotas = 0;
+        int qtdNotas = this.notas.length;
+        
+        for(int i = 0; i < qtdNotas; i++){
+            somaDasNotas += this.notas[i];
+        }
+
+        double media = somaDasNotas / qtdNotas;
+        return media;
     }
 
     public boolean verificaAprovacao(){

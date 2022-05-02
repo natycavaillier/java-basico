@@ -1,4 +1,5 @@
 package aula5;
+import java.lang.Math;
 
 public class Professor extends Pessoa{
     private double salario;
@@ -21,9 +22,17 @@ public class Professor extends Pessoa{
     //#endregion
 
     //#region Regras de Negócios
-    public double calculaSalario(){
-        super.getCpf();
-        return 0;
+    private double calculaSalario(){
+        return Math.round((this.salario * 44) * 4.5);
+    }
+    public String montaHolerite(){
+        String holerite;
+        holerite = ("Nome do Funcionario: " + super.getNome());
+        holerite += (" | CPF: " + super.getCpf());
+        holerite += (" | Valor Salario: " + this.calculaSalario());
+        holerite += (" | Valor hora: " + this.salario);
+        holerite += (" | Curso Referente: " + this.nomeCurso);
+        return holerite;
     }
     //#endregion
 }
