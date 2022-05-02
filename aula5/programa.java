@@ -22,7 +22,10 @@ public class programa {
         double[] notas = {7.5, 9.5, 7.5, 6.3};
         a1.setNotas(notas);
 
-        System.out.println(a1.calculaMedia());
+        //System.out.println(a1.calculaMedia());
+        //System.out.println(a1.verificaAprovacao());
+        
+        System.out.println(a1.montaBoletim());
 
         //System.out.println(p1.montaHolerite());
         
