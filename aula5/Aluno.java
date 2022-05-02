@@ -43,17 +43,14 @@ public class Aluno extends Pessoa{
 
     public String montaBoletim(){
         String boletim;
-        double notaAtual = 0;
+
         boletim = "BOLETIM DO ALUNO: " + super.getNome();
 
         for(int i = 0; i < this.notas.length ; i++){
-            //notaAtual = this.notas[i];
-
             boletim += ("\nA nota da Prova " + (i + 1)+ " foi: " + this.notas[i]);
         }
 
-        //boletim += "\nMEDIA: " + this.calculaMedia();
-        if(this.verificaAprovacao() == true){
+        if(this.verificaAprovacao()){
             boletim += ("\nRESULTADO: Parabéns, você foi aprovado com média " + this.calculaMedia()); 
         }else{
             boletim += ("\nRESULTADO: Sinto muito, você foi reprovado com média " + this.calculaMedia()); 
