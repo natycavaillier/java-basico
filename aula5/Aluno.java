@@ -21,7 +21,7 @@ public class Aluno extends Pessoa{
     //#endregion
 
     //#region Regras de negócios
-    public double calculaMedia(){
+    private double calculaMedia(){
         double somaDasNotas = 0;
         int qtdNotas = this.notas.length;
         
@@ -33,29 +33,31 @@ public class Aluno extends Pessoa{
         return media;
     }
 
-    public boolean verificaAprovacao(){
-        if(this.calculaMedia() >= 7){
+    private boolean verificaAprovacao(){
+        double media = this.calculaMedia();
+        if(media >= 7){
             return true;
         }else{
             return false;
         }
     }
 
+
+
     public String montaBoletim(){
         String boletim;
 
         boletim = "BOLETIM DO ALUNO: " + super.getNome();
 
-        for(int i = 0; i < this.notas.length ; i++){
-            boletim += ("\nA nota da Prova " + (i + 1)+ " foi: " + this.notas[i]);
-        }
-
         if(this.verificaAprovacao()){
-            boletim += ("\nRESULTADO: Parabéns, você foi aprovado com média " + this.calculaMedia()); 
+            for(int i = 0; i < this.notas.length ; i++){
+                boletim += (System.lineSeparator() + "A nota da Prova " + (i + 1) + " foi: " + this.notas[i]);
+            }
+            boletim += (System.lineSeparator() + "RESULTADO: Parabéns, você foi aprovado com média " + this.calculaMedia()); 
         }else{
-            boletim += ("\nRESULTADO: Sinto muito, você foi reprovado com média " + this.calculaMedia()); 
+            boletim += (System.lineSeparator() + "Devido a Políticas da Academia, o boletim está indisponível online."); 
+            
         }
-        
         return boletim;
     }
     //#endregions
