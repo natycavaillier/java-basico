@@ -21,9 +21,7 @@ public class programa {
         a1.setCurso("Java Spring");
         double[] notas = {7.5, 9.5, 7.5, 6.3};
         a1.setNotas(notas);
-
-        //System.out.println(a1.calculaMedia());
-        //System.out.println(a1.verificaAprovacao());
+        
         
         System.out.println(a1.montaBoletim());
 
