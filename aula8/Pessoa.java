@@ -33,4 +33,12 @@ public class Pessoa {
         this.numeroDocumento = numeroDocumento;
     }
     //#endregion
+
+    //#region toString Class com Notação
+    @Override
+    public String toString() {
+        return "Pessoa [numeroDocumento=" + numeroDocumento + ", tipoDocumento=" + tipoDocumento + "]";
+    }
+    
+    //#endregion
 }
