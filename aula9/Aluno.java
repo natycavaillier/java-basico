@@ -68,11 +68,9 @@ public class Aluno {
         int c3 = Integer.parseInt(valorSeparado[2]);
         int d = Integer.parseInt(valorSeparado[3]);
         
-        System.out.println(c1);
-        System.out.println(c2);
-        System.out.println(c3);
-        System.out.println(d);
-
+        System.out.println("c1: " + c1 + ", c2: " + c2 + ", c3: " + c3 + ", d: " + d);
+        
+        System.out.println((c1 + c2 + c3) / d);
     }
     //#endregion
     

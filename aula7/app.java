@@ -1,8 +1,5 @@
 package aula7;
 
-import java.util.Scanner;
-
-import javax.print.attribute.standard.DateTimeAtProcessing;
 
 public class app {
     public static void main(String[] args) {
